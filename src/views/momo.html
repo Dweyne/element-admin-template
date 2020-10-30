@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cans" width="500" height="500"></canvas>
+    <script>
+        var oCanvas = document.getElementById('cans');
+        var ctx = oCanvas.getContext('2d');
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(100, 150, 60, Math.PI * 2, 0);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.moveTo(155, 130);
+        ctx.quadraticCurveTo(600, 20, 350, 400);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.moveTo(157, 160);
+        ctx.quadraticCurveTo(400, 150, 325, 400);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.moveTo(85,160);
+        ctx.lineTo(75,185);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(83,170);
+        ctx.lineTo(86,178);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.moveTo(95,160);
+        ctx.lineTo(100,190);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.moveTo(310, 400);
+        ctx.arcTo(360, 400, 360, 425, 5);
+        ctx.arcTo(360, 425, 300, 425, 23);
+        ctx.arcTo(300, 425, 300, 400, 15);
+        ctx.arcTo(300, 400, 400, 400, 15);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.moveTo(270, 120);
+        ctx.arcTo(370, 140, 360, 170, 15);
+        ctx.arcTo(360, 170, 270, 140, 15);
+        ctx.arcTo(270, 140, 270, 135, 1);
+        ctx.stroke();
+        ctx.closePath();
+    </script>
+</body>
+</html>
